@@ -11,7 +11,7 @@ with open('README.rst') as f:
 
 setup(
     name='yield2await',
-    version='0.0.1a3',
+    version='0.0.1',
     description='Transform your python code to use async/await (PEP 492)',
     long_description=long_description,
     keywords='yield from asyncio coroutines with async await',
