@@ -1,2 +1,5 @@
 *.pyc
+build/
+dist/
 venv/
+yield2await.egg-info/
