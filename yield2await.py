@@ -62,10 +62,14 @@ def transform(path, transformer):
         source = f.read()
 
     tree = ast.parse(source)
+    old_tree_dump = astor.dump_tree(tree)
 
-    tree = transformer.visit(tree)
-    tree = transformer.visit(tree)
-    tree = transformer.visit(tree)
+    transformer.visit(tree)
+    transformer.visit(tree)
+    transformer.visit(tree)
+
+    if old_tree_dump == astor.dump_tree(tree):
+        return
 
     source = astor.to_source(tree)
 
